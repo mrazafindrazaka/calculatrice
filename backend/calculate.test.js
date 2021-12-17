@@ -39,3 +39,7 @@ test('simple priority', () => {
 test('complex priority', () => {
     expect(getResult('-48/2*4*12/8')).toBe(-144)
 })
+
+test('division by 0', () => {
+    expect(getResult('-48/2/0*4*12/8')).toBe(null)
+})
