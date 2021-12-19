@@ -1,5 +1,9 @@
 const {getResult} = require('./calculate')
 
+test('empty string', () => {
+    expect(getResult('')).toBe(null)
+})
+
 test('addition', () => {
     expect(getResult('250+103')).toBe(353)
 })

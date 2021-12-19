@@ -1,4 +1,72 @@
 body {
-    font: 14px "Century Gothic", Futura, sans-serif;
-    margin: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.box-calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+
+.box-calculator h1 {
+    color: lightgrey;
+    font-family: "Audiowide", sans-serif;
+    font-size: 5rem;
+    text-shadow: 1px 1px 12px lightgrey;
+    animation: shadow-grow 5s infinite;
+}
+
+@keyframes shadow-grow {
+    50% {
+        text-shadow: 1px 1px 50px lightgrey;
+    }
+}
+
+.calculator {
+    padding: 1rem;
+    background-color: lightgrey;
+    box-shadow: 1px 1px 12px lightgrey;
+    border-radius: 10px;
+}
+
+.calculator .box-input input {
+    font-family: "Audiowide", sans-serif;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.calculator .box-input input:disabled {
+    background: lightgrey;
+}
+
+.calculator .box-utility {
+    margin: 1rem 0;
+}
+
+.calculator .box-utility button,
+.calculator .box-numbers button {
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 1px 1px 12px lightgrey;
+    border: 1px solid grey;
+    padding: 1rem;
+    font-family: "Audiowide", sans-serif;
+    font-size: 2rem;
+    transition: 0.5s;
+}
+
+.calculator .box-utility button:hover,
+.calculator .box-numbers button:hover {
+    cursor: pointer;
+    text-shadow: 5px 5px 12px lightgrey;
+    transition: 0.5s;
 }

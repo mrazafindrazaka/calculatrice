@@ -7,5 +7,5 @@ test('Test result endpoint', async () => {
         calculate: '-48/2*4*12/8'
     })
     expect(response.status).toBe(200)
-    expect(response.body.result).toBe( -144)
+    expect(response.body.result).toBe('-144')
 })

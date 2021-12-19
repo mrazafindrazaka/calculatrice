@@ -12,6 +12,8 @@ const operation = (type, n1, n2) => {
 }
 
 const getResult = (calculate) => {
+    if (calculate === '')
+        return null
     let splitCalculate = calculate.match(/-?\d+|\+|\*|\//g)
     for (let count = 0; count < splitCalculate.length; count++) {
         if (splitCalculate[count] === '*' || splitCalculate[count] === '/') {
@@ -44,7 +46,7 @@ const getResult = (calculate) => {
 
 const calculate = (req, res) => {
     const result = getResult(req.body.calculate)
-    res.status(200).json({result: result})
+    res.status(200).json({result: result != null ? result.toString() : null})
 }
 
 module.exports = {
